@@ -1,5 +1,6 @@
 {
   "name": "application-header",
+  "version": "0.0.2",
   "main": "application-header.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0-pre.12"
