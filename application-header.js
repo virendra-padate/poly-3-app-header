@@ -1,11 +1,8 @@
-import {
-  PolymerElement,
-  html
-} from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from "@polymer/polymer/polymer-element.js";
 
 /**
  * `application-header`
- * 
+ *
  *
  * @customElement
  * @polymer
@@ -13,7 +10,7 @@ import {
  */
 class ApplicationHeader extends PolymerElement {
   static get template() {
-    return html `
+    return html`
       <style>
         :host {
           display: block;
@@ -22,17 +19,22 @@ class ApplicationHeader extends PolymerElement {
           padding: 0.5em 1em;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h2>Hello {{selectedMenu}}!</h2>
     `;
   }
   static get properties() {
     return {
       prop1: {
         type: String,
-        value: 'application-header-1',
+        value: "application-header-1"
       },
+      selectedMenu: {
+        type: String,
+        notify: true,
+        value: "Hello"
+      }
     };
   }
 }
 
-window.customElements.define('application-header', ApplicationHeader);
+window.customElements.define("application-header", ApplicationHeader);
